@@ -1,14 +1,12 @@
-%global pkg     Cerberus
-
 Name:           python-cerberus
-Version:        0.7.2
+Version:        0.9.2
 Release:        1%{?dist}
 Summary:        Extensible validation for Python dictionaries.
 
 Group:          Development/Languages
 License:        ISC
 URL:            https://github.com/nicolaiarocci/cerberus
-Source0:        https://pypi.python.org/packages/source/C/%{pkg}/%{pkg}-%{version}.tar.gz
+Source0:        https://github.com/nicolaiarocci/cerberus/archive/%{version}.tar.gz
 
 BuildArch:      noarch
 
@@ -23,7 +21,7 @@ Python 2.7, Python 3.3 and Python 3.4.
 
 
 %prep
-%setup -q -n %{pkg}-%{version}
+%setup -q -n cerberus-%{version}
 
 
 %build
@@ -50,5 +48,8 @@ Python 2.7, Python 3.3 and Python 3.4.
 
 
 %changelog
+* Sun Jan 24 2016 Eugene Zamriy <eugene@zamriy.info> - 0.9.2-1
+- Update to 0.9.2 version
+
 * Sun Aug 24 2014 Eugene G. Zamriy <eugene@zamriy.info> - 0.7.2-1
 - Initial release: 0.7.2 version
